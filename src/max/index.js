@@ -7,7 +7,10 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  /* your logic here...*/
+  let filtered = arr.filter(n => {
+    return isFinite(n);
+  });
+  return Math.max(...filtered)
 };
 
 export default max;
